@@ -7,7 +7,7 @@ function makeCurry(Arr) {
   let sum = 0;
   let index = [];
 
-  if (total % 3 != 0) {
+  if (total % 3 > 0) {
     console.log("No Luck");
     return;
   }
@@ -20,7 +20,7 @@ function makeCurry(Arr) {
 
   for (let j = 0; j < Arr.length; j++) {
     for (let k = 1; k < Arr.length; k++) {
-      if (Arr[k] == P[k]) {
+      if (Arr[j] == target || Arr[k] == target) {
         continue;
       } else {
         addTotal = Arr[j] + Arr[k];
@@ -50,6 +50,6 @@ function makeCurry(Arr) {
   console.log("r -->", R);
 }
 
-let arr = [3, 7, 2, 5, 4];
+let arr = [3, 7, 4, 5, 2];
 //let arr = [3, 6, 9, 4];
 makeCurry(arr);
